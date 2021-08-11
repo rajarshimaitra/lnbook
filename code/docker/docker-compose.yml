@@ -30,27 +30,60 @@ services:
   Bob:
     container_name: Bob
     build:
-      context: c-lightning
-    image: lnbook/c-lightning:latest
+        context: lnd
+    image: lnbook/lnd:latest
     networks:
       - lnnet
     expose:
       - "9735"
     restart: always
 
-  Chan:
-    container_name: Chan
+  Carol:
+    container_name: Carol
     build:
-        context: eclair
-    image: lnbook/eclair:latest
+        context: lnd
+    image: lnbook/lnd:latest
     networks:
       - lnnet
     expose:
       - "9735"
     restart: always
 
-  Dina:
-    container_name: Dina
+  Dave:
+    container_name: Dave
+    build:
+        context: lnd
+    image: lnbook/lnd:latest
+    networks:
+      - lnnet
+    expose:
+      - "9735"
+    restart: always
+
+  Ema:
+    container_name: Ema
+    build:
+        context: lnd
+    image: lnbook/lnd:latest
+    networks:
+      - lnnet
+    expose:
+      - "9735"
+    restart: always
+
+  Frank:
+    container_name: Frank
+    build:
+        context: lnd
+    image: lnbook/lnd:latest
+    networks:
+      - lnnet
+    expose:
+      - "9735"
+    restart: always
+
+  Geny:
+    container_name: Geny
     build:
         context: lnd
     image: lnbook/lnd:latest
